@@ -1,0 +1,125 @@
+.page-header {
+    border-bottom: 1px solid #ececec;
+ }
+
+.header-block {
+    @extend %container;
+}
+
+.site-main {
+    display: flex;
+ }
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: $accent-color;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+
+  .logo-end {
+    color: $title-text-color;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+
+  .studio-title {
+    color: $accent-color;
+  }
+  
+  .site-nav__list {
+    @extend %list;
+    display: flex;
+    margin-left: 93px;
+  }
+  
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  .site-nav__item {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  
+  .site-nav__link {
+    position: relative;
+    color: $title-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+  }
+
+  .site-nav__link--current {
+    color: $accent-color;
+  }
+
+  .site-nav__link--current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    border-radius: 2px;
+    background-color: $accent-color;
+    bottom: -34px;
+  }
+ 
+  .contacts-nav__list {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .contacts-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  .contacts-nav__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  
+  .contacts-nav__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  
+  .contacts-nav__link {
+    color: $primary-text-color;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+  }
+  
+  .mail {
+    color: $accent-color;
+  }

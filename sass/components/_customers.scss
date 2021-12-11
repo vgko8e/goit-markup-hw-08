@@ -1,0 +1,51 @@
+ .customers {
+     @extend %section;
+ }
+
+ .customers-block {
+     @extend %container;
+ }
+
+ .customers-title {
+    color: $title-text-color;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .customers-list {
+    @extend %list;
+    display: flex;
+  }
+  
+  .customers-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .customers-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px; 
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+  
+    transition-property: color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus{
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+  }
+  
+  .customers-list__icon {
+  fill: currentColor;
+  }
+  

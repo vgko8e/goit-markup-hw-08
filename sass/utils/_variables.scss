@@ -1,0 +1,33 @@
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+
+body {
+    background-color: #fff;
+    color: $primary-text-color;
+    font-family: Roboto;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p,
+  ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    min-width: 100%;
+    height: auto;
+  }
