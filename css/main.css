@@ -25,7 +25,7 @@ a {
 
 img {
   display: block;
-  min-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -43,7 +43,7 @@ img {
 .header-block, .hero-block, .peculiarities-block, .customers-block, .work-block, .team-block, .footer-list, .portfolio-block {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -336,6 +336,12 @@ img {
   fill: currentColor;
 }
 
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
+}
+
 .work-title {
   text-align: center;
   margin-bottom: 50px;
@@ -399,7 +405,6 @@ img {
 }
 
 .team-title {
-  margin-bottom: 50px;
   color: #212121;
   font-style: normal;
   font-weight: bold;
@@ -409,14 +414,31 @@ img {
   text-align: center;
 }
 
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .team-title {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .team-list__item {
-  margin-right: 30px;
   background-color: #ffffff;
   text-align: center;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -424,13 +446,30 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list__item:nth-child(4n) {
-  margin-right: 0px;
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    width: calc((100% - 2 * 60px) / 4);
+    margin-right: 30px;
+  }
+  .team-list__item:last-child {
+    margin-right: 0px;
+  }
+}
+
+.team-meta {
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .team-meta__title {
   display: block;
-  margin-top: 30px;
   margin-bottom: 10px;
   color: #212121;
   font-style: normal;
@@ -442,7 +481,7 @@ img {
 
 .team-meta__position {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -460,7 +499,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
 }
 
 .social-list__item:not(:last-child) {
@@ -1159,5 +1197,43 @@ img {
 
 .modal-btn:focus {
   fill: #2196f3;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
