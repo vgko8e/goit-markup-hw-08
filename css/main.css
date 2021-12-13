@@ -262,7 +262,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 450px;
+  max-width: 450px;
   height: 120px;
   background: #F5F4FA;
   border-radius: 4px;
@@ -282,7 +282,7 @@ img {
 }
 
 .peculiarities-list__item {
-  width: 450px;
+  max-width: 450px;
   margin-bottom: 30px;
 }
 
@@ -311,6 +311,7 @@ img {
 .peculiarities-list__title {
   margin-top: 0px;
   margin-bottom: 10px;
+  text-align: center;
   color: #212121;
   font-style: normal;
   font-weight: bold;
@@ -318,6 +319,18 @@ img {
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .peculiarities-list__title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .peculiarities-list__title {
+    text-align: left;
+  }
 }
 
 .peculiarities-list__text {
@@ -366,16 +379,11 @@ img {
 }
 
 .customers-list__item {
-  width: 210px;
+  max-width: 210px;
   margin-left: 30px;
   margin-bottom: 30px;
-}
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .customers-list__item {
-    width: calc((100% - 2 * 30px) / 2);
-    margin: 15px;
-  }
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -502,8 +510,8 @@ img {
   color: #212121;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -511,7 +519,13 @@ img {
 @media screen and (min-width: 1200px) {
   .team-title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
+}
+
+.team-list {
+  margin-bottom: -30px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -530,6 +544,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: -15px;
   }
 }
 
@@ -542,28 +557,17 @@ img {
   margin-bottom: 30px;
 }
 
-.team-list__item:last-child {
-  margin-bottom: 0px;
-}
-
 @media screen and (min-width: 768px) {
   .team-list__item {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
-  .team-list__item:last-child {
-    margin-bottom: 15px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
   .team-list__item {
-    margin: 0;
-    margin-right: 30px;
-  }
-  .team-list__item:last-child {
-    margin-right: 0px;
-    margin-bottom: 0px;
+    width: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
   }
 }
 
