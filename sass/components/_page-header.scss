@@ -7,8 +7,12 @@
 }
 
 .site-main {
-    display: flex;
- }
+  @media (max-width: 767px) {
+    justify-content: space-between;
+  }
+  display: flex;
+  align-items: center;
+}
 
 .logo {
     display: flex;
@@ -20,6 +24,10 @@
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+    margin-right: 88px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;      
+    }
   }
 
   .logo-end {
@@ -39,7 +47,9 @@
   .site-nav__list {
     @extend %list;
     display: flex;
-    margin-left: 93px;
+    @media screen and (max-width: 767px){
+        display: none;
+    }
   }
   
   .site-nav__item:not(:last-child) {
@@ -81,22 +91,33 @@
     left: 0;
     border-radius: 2px;
     background-color: $accent-color;
-    bottom: -34px;
+    bottom: -32px;
   }
  
   .contacts-nav__list {
     display: flex;
     margin-left: auto;
+    @media screen and (max-width: 1199px){
+        display: flex;
+        flex-direction: column;
+        padding-top: 21px;  
+    }
+    @media screen and (max-width: 767px){
+        display: none;
+    }
   }
-  
-  .contacts-nav__item:not(:last-child) {
-    margin-right: 50px;
-  }
-  
+
   .contacts-nav__item {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    @media screen and (min-width: 1200px){
+        margin-bottom: 0;
+    &:not(:last-child){
+        margin-right: 50px; 
+      }
+    }
   }
+  
   
   .contacts-nav__icon {
     fill: currentColor;

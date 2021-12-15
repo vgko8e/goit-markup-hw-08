@@ -1,0 +1,33 @@
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    fill: #000000;
+    padding: 10px, 15px;
+    margin-left: auto;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+    @media screen and (min-width: 768px) {
+        display: none;    
+    }
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px, 40px;
+    background-color: #FFFFFF;
+
+    transform: translateX(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
