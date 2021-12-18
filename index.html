@@ -450,26 +450,28 @@
     <!-- mobile-menu -->
     <div class="menu-container js-menu-container " id="mobile-menu">
         <button type="button" class="menu-close js-close-menu">
-          <svg width="40" height="40" aria-label="Переключатель млбильного меню">
+          <svg width="24" height="24" aria-label="Переключатель млбильного меню">
             <use href="./images/icons.svg#icon-close-menu"></use>
           </svg>
         </button>
         <div class="menu-wrap">
             <ul class="mobile-menu__list list">
-                <li class="mobile-menu__item"> <a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студия</a></li>
-                <li class="mobile-menu__item"> <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a></li>
-                <li class="mobile-menu__item"> <a href="" class="mobile-menu__link">Контакты</a></li>
+                <li class="mobile-menu__item"> <a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студия</a></li>
+                <li class="mobile-menu__item"> <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a></li>
+                <li class="mobile-menu__item"> <a class="mobile-menu__link" href="">Контакты</a></li>
             </ul>
-            <ul class="menu-contacts__list list" >
-                <li class="menu-contacts__item"> <a href="mailto:info@devstudio.com" class="menu-contacts__link">info@devstudio.com</li>
-                <li class="menu-contacts__item"> <a href="tel:+380961111111" class="menu-contacts__link">+380961111111</li>
-            </ul> 
-            <ul class="menu-social__list list">
-                <li class="menu-social__item"> <a class="menu-social__link" href="">Instagram</a> </li>
-                <li class="menu-social__item"> <a class="menu-social__link" href="">Twitter</a> </li>
-                <li class="menu-social__item"> <a class="menu-social__link" href="">Facebook</a> </li>
-                <li class="menu-social__item"> <a class="menu-social__link" href="">LinkedIn</a> </li>
-            </ul>
+            <div class="mobile-link">
+                <ul class="menu-contacts__list list" >
+                    <li class="menu-contacts__item"> <a class="menu-contacts__link menu-contacts__link--tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    <li class="menu-contacts__item"> <a class="menu-contacts__link menu-contacts__link--mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul> 
+                <ul class="menu-social__list list">
+                    <li class="menu-social__item"> <a class="menu-social__link" href="">Instagram</a></li>
+                    <li class="menu-social__item"> <a class="menu-social__link" href="">Twitter</a></li>
+                    <li class="menu-social__item"> <a class="menu-social__link" href="">Facebook</a></li>
+                    <li class="menu-social__item"> <a class="menu-social__link" href="">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
