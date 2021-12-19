@@ -17,16 +17,26 @@
   .filter-list {
     @extend %list;
     display: flex;
-    justify-content: center;
-    margin-bottom: 34px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        margin-bottom: 30px;    
+    }
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+      margin-bottom: 34px;    
+  }
   }
   
   .filter-list__item{
     margin-right: 8px;
-  }
-  
-  .filter-list__item:nth-child(5n) {
-    margin-right: 0px;
+    &:nth-child(-n+3) {
+      margin-bottom: 15px;
+    }
+    &:nth-child(5n) {
+      margin-right: 0px;
+    }
   }
   
   .filter-list__btn {
@@ -53,6 +63,9 @@
         background-color: $accent-color;
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
+    @media screen and (max-width: 479px) {
+      font-size: 14px;      
+    }
   }
   
   /* предложения */
@@ -66,13 +79,29 @@
   
   .proposal-list {
     @extend %list;
+    margin-bottom: -30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
   
   .proposal-list__item {
-    margin-right: 30px;
     margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 30px) / 2); 
+      margin: 15px;     
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    } 
   } 
   
   .proposal-action {
@@ -123,18 +152,11 @@
     opacity: 1;
   }
   
-  .proposal-list__item:nth-child(3n) {
-    margin-right: 0;
-  }
-  
-  .proposal-list__item:last-child(-n+3) {
-    margin-bottom: 0;
-  }
-  
   .proposal-list__link {
     display: block;
     text-decoration: none;
-    
+    border: 1px solid #EEEEEE;
+    height: 100%;
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -147,7 +169,6 @@
   .proposal-card{
     padding: 24px 0 20px 24px;
     border-top: 0;
-    border: 1px solid #eeeeee;
     overflow: hidden;
     }
     
