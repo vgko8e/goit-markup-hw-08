@@ -84,6 +84,10 @@
       }
 }
 
+.mobile-menu__link--current {
+    color: $accent-color;
+}
+
 .mobile-link {
     display: flex;
     flex-direction: column;

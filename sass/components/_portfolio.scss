@@ -128,24 +128,25 @@
   }
   
   .proposal-action__text {
-    display: block;
-    content: "";
     position: absolute;
     color: #ffffff;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.56;
     letter-spacing: 0.03em;
-    top: 63px;
-    left: 24px;
-    bottom: 63px;
-    right: 24px;
+    top: 0;
+    padding: 24px 24px;
     opacity: 0;
   
     transition-property: opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 480px) {
+      font-size: 18px;
+      padding: 63px 24px;      
+    }
   }
   
   .proposal-list__link:hover .proposal-action__text {
